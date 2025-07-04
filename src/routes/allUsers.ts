@@ -5,7 +5,7 @@ const router = Router();
 
 /**
  * @swagger
- * /:
+ * /user:
  *   get:
  *     summary: Get all users
  *     tags:

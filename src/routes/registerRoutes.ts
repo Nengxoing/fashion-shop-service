@@ -6,7 +6,7 @@ const router = Router();
 
 /**
  * @swagger
- * /register:
+ * /user/register:
  *   post:
  *     summary: Register a new user
  *     tags:
