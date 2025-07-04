@@ -9,8 +9,8 @@ const options: swaggerJSDoc.Options = {
             description: 'API Documentation for Fashion Shop Service',
         },
         servers: [
-            { url: 'http://localhost:5000/users' },
-            { url: 'https://fashion-shop-service-production.up.railway.app/users' }
+            { url: 'http://localhost:5000' },
+            { url: 'https://fashion-shop-service-production.up.railway.app' }
         ]
     },
     apis: ['src/routes/*.ts'],

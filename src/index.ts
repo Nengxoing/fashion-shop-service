@@ -11,12 +11,15 @@ const PORT: number = parseInt(process.env.PORT || '5000', 10);
 app.use(express.json());
 app.use(cors());
 
+// เส้นทาง API ทั้งหมด
+app.use('/', userRoutes);
+
+// ✅ ให้ redirect / ไปยัง /api-interface
 app.get("/", (req: Request, res: Response) => {
   res.redirect('/api-interface');
 });
 
-app.use('/users', userRoutes);
-
+// Swagger UI
 app.use('/api-interface', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.listen(PORT, () => {
