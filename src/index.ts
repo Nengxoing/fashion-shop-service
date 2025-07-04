@@ -1,4 +1,3 @@
-// src/index.ts
 import 'dotenv/config';
 import express, { Request, Response, Application } from 'express';
 import cors from 'cors';
@@ -14,11 +13,11 @@ app.use(cors());
 
 app.use('/users', userRoutes);
 
-app.use('/api-interface', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
 app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, Railway!");
+  res.redirect('/api-interface');
 });
+
+app.use('/api-interface', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

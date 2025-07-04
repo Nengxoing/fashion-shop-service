@@ -10,7 +10,7 @@ const options: swaggerJSDoc.Options = {
         },
         servers: [
             {
-                url: 'http://localhost:5000/users',
+                url: 'https://fashion-shop-service-production.up.railway.app/users',
             },
         ],
     },

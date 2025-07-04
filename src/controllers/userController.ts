@@ -60,7 +60,7 @@ const getAllUsers: RequestHandler = async (req: Request, res: Response, next: Ne
                 id: true,
                 name: true,
                 email: true,
-                created_date: true, // เปลี่ยนจาก createdAt เป็น created_date
+                created_date: true,
             },
         });
         res.json(users);
