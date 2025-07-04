@@ -1,4 +1,5 @@
-import { Request, Response, NextFunction, RequestHandler } from 'express';
+// src/controllers/registerController.ts
+import { Request, Response, NextFunction } from 'express';
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 
@@ -53,24 +54,4 @@ const registerUser = async (
     }
 };
 
-const getAllUsers: RequestHandler = async (req: Request, res: Response, next: NextFunction) => {
-    try {
-        const users = await prisma.user.findMany({
-            select: {
-                id: true,
-                name: true,
-                email: true,
-                created_date: true,
-            },
-        });
-        res.json(users);
-    } catch (error: any) {
-        console.error('Error fetching users:', error);
-        next(error);
-    }
-};
-
-export {
-    registerUser,
-    getAllUsers,
-};
+export default registerUser;
