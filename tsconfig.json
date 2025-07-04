@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2022" /* กำหนดเวอร์ชัน JavaScript ที่จะคอมไพล์ไป */,
-    "module": "commonjs" /* กำหนดระบบโมดูล (สำหรับ Node.js) */,
-    "rootDir": "./" /* กำหนดโฟลเดอร์ root ของไฟล์ source */,
-    "outDir": "./dist" /* กำหนดโฟลเดอร์สำหรับไฟล์ JavaScript ที่คอมไพล์แล้ว */,
-    "esModuleInterop": true /* ช่วยในการ import CommonJS modules ใน ES modules */,
-    "forceConsistentCasingInFileNames": true /* บังคับให้ชื่อไฟล์และ directory มี casing ที่สอดคล้องกัน */,
-    "strict": true /* เปิดใช้งานการตรวจสอบ type ที่เข้มงวดทั้งหมด */,
-    "skipLibCheck": true /* ข้ามการตรวจสอบ type ของไฟล์ library */,
-    "resolveJsonModule": true /* อนุญาตให้ import .json files */,
-    "sourceMap": true /* สร้าง source map สำหรับ debugging */
+    "target": "es2022",
+    "module": "commonjs",
+    "rootDir": "./src" /* <-- แก้ไขตรงนี้ */,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "sourceMap": true
   },
-  "include": ["**/*.ts" /* รวมไฟล์ .ts ทั้งหมดในโปรเจกต์ */],
+  "include": ["src/**/*.ts" /* <-- แก้ไขตรงนี้ */],
   "exclude": ["node_modules", "dist"]
 }
